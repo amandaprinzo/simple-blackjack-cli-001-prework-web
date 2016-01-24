@@ -4,7 +4,7 @@ end
 
 def deal_card
     card = rand(1..11)
-    return card
+    puts card
 end
 
 def display_card_total(card_total)
@@ -17,7 +17,7 @@ end
 
 def get_user_input
     answer = gets.chomp
-    return "#{answer}"
+    puts "#{answer}"
 end
 
 def end_game(card_total)
@@ -30,17 +30,17 @@ def initial_round
     end
       card_total = deal_card + deal_card
       display_card_total(card_total)
-      return card_total
+      puts card_total
 end
 
 def hit?(card_total)
   prompt_user
   get_user_input
-  return card_total
+  puts card_total
   if get_user_input == "h"
       deal_card
       new_total = card_total += deal_card
-      return new_total
+      puts new_total
   elsif get_user_input == "s"
     nil
   else
